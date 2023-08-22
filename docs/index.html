@@ -1,14 +1,14 @@
 ---
 layout: default
-description: Packages used by Manjaro Sway Edition.
+description: Packages used by Manjaro Hyprland Edition.
 ---
 
 {% assign extensions = '.zst,.sig,.db,.files,.gz' %}
 <pre>
 ### install ###
 
-## remove existing manjaro-sway repository configuration
-sudo sed -i '/\[manjaro-sway\]/,+2 d'  /etc/pacman.conf
+## remove existing manjaro-hyprland repository configuration
+sudo sed -i '/\[manjaro-hyprland\]/,+2 d'  /etc/pacman.conf
 
 ## include the repo configuration
 sudo sed -i '/^\[core\]/i \Include = /etc/pacman.d/{{ site.name or site.title }}.repo.conf\n' /etc/pacman.conf

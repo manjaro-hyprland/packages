@@ -1,9 +1,9 @@
-title: Manjaro Sway Edition Repository
-email: info@manjaro-sway.download
-url: "https://pkg.manjaro-sway.download"
-name: manjaro-sway
+title: Manjaro Hyprland Edition Repository
+email: info@manjaro-hyprland.download
+url: "https://pkg.manjaro-hyprland.timesavior.io"
+name: manjaro-hyprland
 
-remote_theme: manjaro-sway/manjaro-sway
+remote_theme: manjaro-hyprland/manjaro-hyprland
 
 plugins:
   - jekyll-file-size
