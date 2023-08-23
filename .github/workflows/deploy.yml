@@ -21,19 +21,19 @@ jobs:
       with:
         ruby-version: 2.7.8
 
-    - name: Change workdir
-      run: |
-        cd docs
     - name: Install Bundler and Jekyll dependencies
+      working-directory: docs
       run: |
         gem install bundler
         bundle install
 
     - name: Build Jekyll site
+      working-directory: docs
       run: bundle exec jekyll build
 
     - name: Install Vercel CLI
       run: npm i -g vercel
 
     - name: Deploy to Vercel
+      working-directory: docs
       run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod _site/
