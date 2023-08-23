@@ -29,7 +29,9 @@ jobs:
 
     - name: Build Jekyll site
       working-directory: docs
-      run: bundle exec jekyll build -d .vercel/output
+      run: |
+        mkdir .vercel
+        bundle exec jekyll build -d .vercel/output
 
     - name: Test
       working-directory: docs
