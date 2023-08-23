@@ -36,4 +36,4 @@ jobs:
 
     - name: Deploy to Vercel
       working-directory: docs
-      run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod _site/
+      run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm _site/
