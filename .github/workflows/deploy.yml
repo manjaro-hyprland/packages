@@ -31,9 +31,13 @@ jobs:
       working-directory: docs
       run: bundle exec jekyll build
 
+    - name: Test
+      working-directory: docs
+      run: |
+        ls -la stable/x86_64/manjaro*
+
     - name: Install Vercel CLI
       run: npm i -g vercel
 
     - name: Deploy to Vercel
-      working-directory: docs
-      run: vercel --token ${{ secrets.VERCEL_TOKEN }} --prod --confirm _site/
+      run: vercel --token ${{ secrets.VERCEL_TOKEN }} --cwd docs --scope manjaro-hyprland --prod --yes _site/
