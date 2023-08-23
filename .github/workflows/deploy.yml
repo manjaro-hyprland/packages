@@ -21,6 +21,9 @@ jobs:
       with:
         ruby-version: 2.7.8
 
+    - name: Change workdir
+      run: |
+        cd docs
     - name: Install Bundler and Jekyll dependencies
       run: |
         gem install bundler
