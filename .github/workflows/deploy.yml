@@ -31,7 +31,7 @@ jobs:
       working-directory: docs
       run: |
         mkdir .vercel
-        bundle exec jekyll build -d .vercel/output
+        bundle exec jekyll build -d .vercel/output --safe false
         cp config.json .vercel/output
 
     - name: Test
