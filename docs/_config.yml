@@ -12,4 +12,3 @@ plugins:
 webp:
   enabled: true
   formats: [".jpeg", ".jpg", ".png", ".tiff"]
-safe: false
