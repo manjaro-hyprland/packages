@@ -44,8 +44,8 @@ jobs:
         shell: bash
         run: |
           pacman -Sy --noconfirm --needed wget git-lfs github-cli
-          wget http://archive.archlinux.org/packages/g/git/git-2.41.0-2-x86_64.pkg.tar.xz
-          pacman -U git-2.41.0-2-x86_64.pkg.tar.xz --noconfirm
+          wget http://archive.archlinux.org/packages/g/git/git-2.41.0-2-x86_64.pkg.tar.zst
+          pacman -U git-2.41.0-2-x86_64.pkg.tar.zst --noconfirm
       - id: repo-add
         uses: manjaro-contrib/action-repo-add@main
         with:
