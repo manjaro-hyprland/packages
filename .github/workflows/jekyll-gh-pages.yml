@@ -35,6 +35,11 @@ jobs:
         with:
           source: ./docs
           destination: ./_site
+      - name: Test
+        run: |
+          ls -lha ./docs/stable/x85_64/manjaro*
+          echo '======'
+          ls -lha ./_site/stable/x85_64/manjaro*
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
 
