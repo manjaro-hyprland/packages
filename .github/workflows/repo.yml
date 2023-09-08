@@ -55,3 +55,10 @@ jobs:
           branch: ${{ env.branch }}
           gpg_keyid: ${{ vars.gpg_keyid }}
           gpg_secret_base64: ${{ secrets.gpg_secret_base64 }}
+      - id: trigger
+        name: triggers the update of the manajro-hyprland database
+        uses: peter-evans/repository-dispatch@v2
+        with:
+          token: ${{ secrets.DISPATCH_TOKEN }}
+          repository: manjaro-hyprland/packages
+          event-type: package_has_updated
